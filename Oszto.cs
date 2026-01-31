@@ -30,5 +30,11 @@ namespace Blackjack
 			}
 			return jatekosKartyai;
 		}
+
+        public static Kartya LapKeres(List<Kartya> pakli) 
+        {
+            Kartya lap = pakli[rnd.Next(pakli.Count)];
+            return lap;
+        } 
 	}
 }

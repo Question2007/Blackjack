@@ -58,7 +58,7 @@ namespace Blackjack
 				}
 			}
 
-			return 0;  // Ha nem található, alapértelmezett értékként 0-t adunk vissza
+			return 10;  // Ha nem található, alapértelmezett értékként 0-t adunk vissza
 		}
 
 		// Kártya értékének visszaadása
