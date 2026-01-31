@@ -1,0 +1,15 @@
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/obj/Debug/net8.0/Blackjack.GeneratedMSBuildEditorConfig.editorconfig
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/obj/Debug/net8.0/Blackjack.AssemblyInfoInputs.cache
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/obj/Debug/net8.0/Blackjack.AssemblyInfo.cs
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/obj/Debug/net8.0/Blackjack.csproj.CoreCompileInputs.cache
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/obj/Debug/net8.0/Blackjack.sourcelink.json
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/bin/Debug/net8.0/Blackjack
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/bin/Debug/net8.0/Blackjack.deps.json
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/bin/Debug/net8.0/Blackjack.runtimeconfig.json
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/bin/Debug/net8.0/Blackjack.dll
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/bin/Debug/net8.0/Blackjack.pdb
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/obj/Debug/net8.0/Blackjack.dll
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/obj/Debug/net8.0/refint/Blackjack.dll
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/obj/Debug/net8.0/Blackjack.pdb
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/obj/Debug/net8.0/Blackjack.genruntimeconfig.cache
+/Users/karsaizeteny/Documents/AsztalProg/Blackjack/obj/Debug/net8.0/ref/Blackjack.dll
