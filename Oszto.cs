@@ -22,13 +22,12 @@ namespace Blackjack
 
 		public static List<Kartya> Osztas(List<Kartya> pakli)
 		{
-			List<Kartya> jatekosKartyai = new List<Kartya>();
+			List<Kartya> osztoKartyai = new List<Kartya>();
 			for (int i = 0; i < 2; i++) { 
 				Kartya k = pakli[rnd.Next(pakli.Count)];	
-				jatekosKartyai.Add(k);
-
+				osztoKartyai.Add(k);
 			}
-			return jatekosKartyai;
+			return osztoKartyai;
 		}
 
         public static Kartya LapKeres(List<Kartya> pakli) 

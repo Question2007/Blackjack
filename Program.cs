@@ -5,7 +5,6 @@
         static void Main(string[] args)
         {
             List<Kartya> pakli = Kartya.PakliLetrehozas();
-
             foreach (Kartya k in pakli)
             {
                 Console.WriteLine(k);
@@ -14,7 +13,7 @@
 
             //Játékos lapjai
             List<Kartya> jatekosKartyai = new List<Kartya>();
-            jatekosKartyai = Oszto.Osztas(pakli);
+            jatekosKartyai = Jatekos.Osztas(pakli);
             System.Console.WriteLine("--------Játékos kártyái----------");
             int jatekosErtek = 0;
 			foreach (Kartya k in jatekosKartyai)
@@ -22,10 +21,15 @@
 				Console.WriteLine(k);
                 jatekosErtek += k.kartyaErtek();
 			}
-            System.Console.WriteLine($"Játékos lapjainak értéke: {jatekosErtek}");
+            System.Console.WriteLine($"Játékos lapjainak értéke: {Jatekos.LapOsszeg(jatekosKartyai)}");
+            System.Console.WriteLine("--------Lap húzás----------");
+            Kartya ul = Jatekos.LapKeres(pakli);
+            jatekosKartyai.Add(ul);
+            System.Console.WriteLine(ul);
+            System.Console.WriteLine($"Játékos lapjainak értéke: {Jatekos.LapOsszeg(jatekosKartyai)}");
 
             //Osztó lapjai
-            List<Kartya> osztoKartyai = new List<Kartya>();
+            /*List<Kartya> osztoKartyai = new List<Kartya>();
             osztoKartyai = Oszto.Osztas(pakli);
             System.Console.WriteLine("--------Osztó kártyái----------");
 			foreach (Kartya k in osztoKartyai)
@@ -36,7 +40,7 @@
             System.Console.WriteLine("_________-Lap kérés-----------");
             Kartya lap = Oszto.LapKeres(pakli);
             System.Console.WriteLine(lap);
-            System.Console.WriteLine(lap.kartyaErtek());
+            System.Console.WriteLine(lap.kartyaErtek());*/
 		}
     }
 }

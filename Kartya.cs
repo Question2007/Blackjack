@@ -35,16 +35,18 @@ namespace Blackjack
 		}
 
 		private Szin szin;  // Szín tárolása
-		private string szam;  // Szám tárolása szöveges formában
+		private string szamString;  // Szám tárolása szöveges formában
 		private int ertek;  // A kártya numerikus értéke (szám)
 
 		// Konstruktor, amely a számot szöveges formában és a színt enumként tárolja
 		public Kartya(Szin szin, string szam)
 		{
 			this.szin = szin;
-			this.szam = szam;
-			this.ertek = ConvertSzamToErtek(szam);  // A szöveges számot átalakítjuk numerikus értékké
+			this.szamString = szam;
+			this.ertek = ConvertSzamToErtek(szamString);  // A szöveges számot átalakítjuk numerikus értékké
 		}
+
+        public string SzamString { get => szamString; set => szamString = value; }
 
 		// A szöveges számot numerikus értékké konvertáló metódus
 		private int ConvertSzamToErtek(string szam)
@@ -69,7 +71,7 @@ namespace Blackjack
 
 		public override string ToString()
 		{
-			return $"{szin}-{szam}";
+			return $"{szin}-{szamString}";
 		}
 
 		public static List<Kartya> PakliLetrehozas()
