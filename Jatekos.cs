@@ -43,9 +43,9 @@ namespace Blackjack
             int aszDb =  0;
             foreach (var item in jatekosKartyai)
             {
-                osszeg += item.kartyaErtek();
+                osszeg += (int)item.szam;
 
-                if (item.SzamString == "Asz") {
+                if (item.szam == Kartya.Szam.Asz) {
                     aszDb++; 
                 }
             }

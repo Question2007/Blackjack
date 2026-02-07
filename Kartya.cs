@@ -34,19 +34,15 @@ namespace Blackjack
 			Asz = 11
 		}
 
-		private Szin szin;  // Szín tárolása
-		private string szamString;  // Szám tárolása szöveges formában
-		private int ertek;  // A kártya numerikus értéke (szám)
-
-		// Konstruktor, amely a számot szöveges formában és a színt enumként tárolja
-		public Kartya(Szin szin, string szam)
-		{
-			this.szin = szin;
-			this.szamString = szam;
-			this.ertek = ConvertSzamToErtek(szamString);  // A szöveges számot átalakítjuk numerikus értékké
-		}
-
-        public string SzamString { get => szamString; set => szamString = value; }
+		public Szin szin { get; } 
+		public Szam szam { get; } 
+		public Kartya(Szin szin, Szam szam) 
+		{ 
+			this.szin = szin; 
+			this.szam = szam; 
+		}        
+			
+		//public string SzamString { get => szamString; set => szamString = value; }
 
 		// A szöveges számot numerikus értékké konvertáló metódus
 		private int ConvertSzamToErtek(string szam)
@@ -64,26 +60,26 @@ namespace Blackjack
 		}
 
 		// Kártya értékének visszaadása
-		public int kartyaErtek()
-		{
-			return ertek;  // A numerikus értéket adjuk vissza
+		public int kartyaErtek() 
+		{ 
+			return (int)this.szam; 
+		} 
+		public override string ToString() 
+		{ 
+			return $"{this.szin}-{szam}"; 
 		}
-
-		public override string ToString()
-		{
-			return $"{szin}-{szamString}";
-		}
-
 		public static List<Kartya> PakliLetrehozas()
 		{
 			List<Kartya> pakli = new List<Kartya>();
-			foreach (Szin color in Enum.GetValues(typeof(Szin))) {
-				foreach (string num in Enum.GetNames(typeof(Szam)))
+			foreach (Szin color in Enum.GetValues(typeof(Szin)))
+			{
+				foreach (Szam num in Enum.GetValues(typeof(Szam)))
 				{
 					pakli.Add(new Kartya(color, num));
 				}
 			}
 			return pakli;
 		}
+
 	}
 }

@@ -35,5 +35,27 @@ namespace Blackjack
             Kartya lap = pakli[rnd.Next(pakli.Count)];
             return lap;
         } 
+
+		public static int LapOsszeg(List<Kartya> osztoKartyai) 
+        {
+            int osszeg = 0;
+            int aszDb =  0;
+            foreach (var item in osztoKartyai)
+            {
+                osszeg += (int)item.szam;
+
+                if (item.szam == Kartya.Szam.Asz) {
+                    aszDb++; 
+                }
+            }
+
+            while (osszeg > 21 && aszDb > 0)
+            {
+                osszeg -= 10;
+                aszDb--;
+            }
+
+            return osszeg;
+        }
 	}
 }
